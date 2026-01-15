@@ -2,27 +2,84 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>邓益轩的简历预览</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>邓益轩 - 个人简历 (Yixuan Deng)</title>
     <style>
-        body { font-family: sans-serif; margin: 20px; background-color: #f0f2f5; }
-        .container { display: flex; gap: 20px; height: 90vh; }
-        .pdf-viewer { flex: 1; display: flex; flex-direction: column; }
-        iframe { width: 100%; height: 100%; border: 1px solid #ccc; border-radius: 8px; }
-        h2 { color: #333; font-size: 1.2rem; }
+        /* 页面基础设置 */
+        body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; display: flex; flex-direction: column; height: 100vh; background-color: #525659; }
+        
+        /* 顶部导航栏样式 */
+        header {
+            background-color: #24292e; /*以此深色背景显得专业 */
+            color: white;
+            padding: 12px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            z-index: 10;
+        }
+
+        .title { font-size: 18px; font-weight: 600; letter-spacing: 1px; }
+
+        /* 优势高亮条样式 */
+        .highlight-bar {
+            background-color: #e6f7ff; /* 浅蓝色背景 */
+            color: #0050b3; /* 深蓝色文字 */
+            padding: 8px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+            border-bottom: 1px solid #bae7ff;
+        }
+
+        /* 按钮组样式 */
+        .btn-group { display: flex; gap: 15px; align-items: center; }
+
+        /* 通用按钮样式 */
+        .btn {
+            text-decoration: none;
+            padding: 6px 16px;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: all 0.2s ease;
+        }
+
+        /* 切换语言按钮（幽灵按钮风格） */
+        .btn-switch {
+            border: 1px solid rgba(255,255,255,0.7);
+            color: white;
+        }
+        .btn-switch:hover { background-color: rgba(255,255,255,0.1); border-color: white; }
+
+        /* 下载按钮（强调色风格） */
+        .btn-download {
+            background-color: #2ea44f; /* GitHub Green */
+            color: white;
+            border: 1px solid #2ea44f;
+            font-weight: 600;
+        }
+        .btn-download:hover { background-color: #2c974b; }
+
+        /* PDF 阅读器区域 */
+        iframe { flex-grow: 1; border: none; width: 100%; display: block; }
     </style>
 </head>
 <body>
-    <h1>简历预览控制台</h1>
-    <div class="container">
-        <div class="pdf-viewer">
-            <h2>中文简历 (resume.pdf)</h2>
-            <iframe src="resume.pdf"></iframe>
+
+    <header>
+        <div class="title">📄 邓益轩 (Yixuan Deng)</div>
+        <div class="btn-group">
+            <a href="cv_en.html" class="btn btn-switch">🇺🇸 English Version</a>
+            <a href="resume.pdf" download class="btn btn-download">⬇ 下载 PDF</a>
         </div>
-        
-        <div class="pdf-viewer">
-            <h2>英文简历 (en.pdf)</h2>
-            <iframe src="en.pdf"></iframe>
-        </div>
+    </header>
+
+    <div class="highlight-bar">
+        📍 Base 珠海 (中大珠海校区) &nbsp;&nbsp;|&nbsp;&nbsp; 🚀 随时到岗 &nbsp;&nbsp;|&nbsp;&nbsp; ✅ 实习期可覆盖大促全周期
     </div>
+
+    <iframe src="resume.pdf"></iframe>
+
 </body>
 </html>
